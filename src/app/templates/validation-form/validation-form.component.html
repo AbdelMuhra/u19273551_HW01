@@ -1,0 +1,16 @@
+<mat-card>
+  <h2 class="text-center" *ngIf='!url[0]'>Select Files:</h2>
+  <h2 class="text-center" *ngIf='url[0] && !url[1]'>Select Last File:</h2>
+  <h2 class="text-center" *ngIf='url[1]'>Replace File:</h2>
+  <br/>
+  <div class="container text-center">
+      <input type="file" (change)="onselect($event)" multiple>
+      <br/>
+      <br/>
+      <h2 class="text-center" *ngIf='url[0]'>Chosen Files:</h2>
+      <br/>
+      <img *ngFor='let u of url' src="{{u}}" width="auto" height="auto">
+      <br/>
+  </div>
+</mat-card>
+

@@ -1,0 +1,21 @@
+div {
+  text-align: center;
+}
+label {
+  text-align: left;
+}
+.tncs {
+  font-size: 0.7em;
+}
+.form-control.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+.form-control.ng-touched.ng-valid {
+  border: 1px solid green;
+}
+.mat-card {
+  max-width: 500px;
+  text-align: center;
+  background-color: aliceblue;
+  margin: 3em auto;
+}

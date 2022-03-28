@@ -1,0 +1,30 @@
+<mat-card>
+    <div class="container">
+        <form  (ngSubmit)="submit()" name="driverDetailsForm" [formGroup]="loginForm" >
+            <div class="form-group">
+                <label for="username">Username:</label>
+                
+                <input formControlName="username" required minlength=3 required type="text" name="username" class="form-control">
+                <div *ngIf="loginForm.controls['username'].invalid && loginForm.controls['username'].touched" class="alert alert-danger" class="alert alert-danger">Please enter name</div>
+            </div>
+            <pre></pre>
+            <div class="form-group">
+                <label for="idnumber">ID Number:</label>
+                <input formControlName="idnumber" required minlength=13 maxlength=13 type="text" name="idnumber" class="form-control">
+                <div *ngIf="loginForm.controls['idnumber'].invalid && loginForm.controls['idnumber'].touched" class="alert alert-danger">Please enter valid id number</div>
+            </div>
+            <pre></pre>
+            <div class="form-group">
+                <label for="otp">OTP:</label>
+                <input formControlName="otp" required minlength=3 maxlength=3 type="text" name="otp" class="form-control">
+                <div *ngIf="loginForm.controls['otp'].invalid && loginForm.controls['otp'].touched" class="alert alert-danger">Please enter valid OTP</div>
+                <pre></pre>
+                <button class="btn btn-primary" type="submit">Next</button>
+                <br>
+                <p class="tncs">By clicking next, I agree that the above information is
+                    accurate.</p>
+            </div>
+        </form>
+    </div>
+</mat-card>
+
